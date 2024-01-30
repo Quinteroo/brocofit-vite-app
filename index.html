@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4285f4" />
+  <meta name="description" content="Lucha por la mejor versión de ti, te ayudamos con nuestro contador de calorías" />
+  <meta name="keywords" content="fit, calorías, adelgazar, dieta" />
+  <meta name="author" content="Miguel Angel Quintero Gordo" />
+  <meta name="google" content="notranslate" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="cache-control" content="no-store" />
+
+  <meta property="og:site_name" content="Brocofit">
+  <meta property="og:description"
+    content="Te ayudamos para controlar la ingesta de alimentos que necesitas usando nuestro contador de calorías">
+  <meta property="og:image"
+    content="https://thumbs.dreamstime.com/b/funny-cartoon-broccoli-illustration-powerful-big-muscles-68611233.jpg">
+  <meta property="og:tittle" content="Brocofit - contador de calorías diarias">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Quinteroo">
+
+  <link rel="canonical" href="https://github.com/Quinteroo">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./assets/brocoli-icon.png" type="image/x-icon">
+  <script type="module" src="./index.js" defer></script>
+  <title>Brocofit</title>
+</head>
+
+<body class="flex-column">
+  <header class="flex-column box-1">
+    <img loading="lazy" class="avatar logo" src="./assets/strongBrocoli.png" alt="strongBrocoli">
+    <h1>Brocofit</h1>
+    <h2>Contador de calorías diarias</h2>
+    <p>Para enfrentar la odisea de adelgazar de manera correcta y sencilla. Te ayudamos a controlar la ingesta de
+      alimentos que necesitas usando nuestro contador de calorías</p>
+  </header>
+
+  <main>
+
+
+    <section class="calculator flex-column">
+      <form id="calculator" class="box-1 flex-column">
+        <h3>Cálculadora de Déficit Calórico</h3>
+        <p>Son el total de calorías que necesitas consumir al día para perder peso. Se trata de la resta de tus calorías
+          de mantenimiento (La Fórmula de Harris-Benedict) menos el déficit deseado. En este caso, como queremos que sea
+          sostenible en el tiempo, es un deficit 'suave'</p>
+        <select id="genero" required>
+          <option selected>género</option>
+          <option value="hombre">hombre</option>
+          <option value="mujer">mujer</option>
+        </select>
+        <input placeholder="peso" id="peso" type="number" max="120" required />
+        <input placeholder="altura (cm)" id="altura" type="number" max="210" required />
+        <input placeholder="edad" id="edad" type="number" min="18" max="99" required />
+        <select id="ejercicio" required>
+          <option selected>actividad física</option>
+          <option value="sedentario">sedentario</option>
+          <option value="bajaActividad">1-3 veces/semana</option>
+          <option value="mediaActividad">3-5 veces/semana </option>
+          <option value="altaActividad">6-7 veces/semana</option>
+        </select>
+
+        <button id="calcular" type="button">Calcular déficit calórico</button>
+
+        <div class="total-calories flex-column">
+        </div>
+      </form>
+    </section>
+
+
+
+
+    <section class="food box-1 flex-column">
+      <h3>Busca y añade que comiste</h3>
+      <p>puedes ampliar tu recetario si lo deseas</p>
+      <select id="food-filter">
+        <option value="todos" selected>tipo de alimento</option>
+      </select>
+      <input id="cal-max" placeholder="calorías máximas" type="number">
+
+      <div class="flex-center">
+        <button class="button-filter" id="limpiar-filtros">limpiar filtros</button>
+        <button class="button-filter" id="buscar-filtro">buscar</button>
+      </div>
+
+
+      <div class="products">
+      </div>
+
+    </section>
+
+
+    <section class="box-1 flex-column">
+      <h3>Calorías que consumiste hoy</h3>
+      <div class="sum-calorie box-1 flex-column">
+
+      </div>
+      <button class="flex-column" id="resultado">RESULTADO</button>
+      <div class="box-1 flex-column" id="resultado-final"></div>
+    </section>
+
+
+
+    <img loading="lazy" src="./assets/cutlery.png" class="food-form" alt="cutlery-icon">
+    <form class="recepies flex-column no-visible" id="recipe">
+      <h3>Amplía tu recetario!</h3>
+      <input placeholder="nombre del alimento" id="nombre" />
+      <input placeholder="imagen del alimento" id="imagen" />
+      <input placeholder="calorías del alimento" id="calorías" type="number" />
+      <select id="food-type">
+        <option selected>tipo de alimento</option>
+        <option value="verdura">verdura</option>
+        <option value="fruta">fruta</option>
+        <option value="lacteo">lácteo</option>
+        <option value="cereal">cereales</option>
+        <option value="proteinas">proteinas</option>
+        <option value="receta">recetas</option>
+        <option value="basura">basura</option>
+      </select>
+      <button id="nam" type="button">ÑAM</button>
+    </form>
+
+  </main>
+
+  <footer class="box-1 flex-column">
+    <div class="flex-column">
+      <img loading="lazy" class="avatar profile" src="./assets/humanAfterAll.png" alt="humanAfterAll">
+      <ul>
+        <li>Miguel Angel Quintero</li>
+        <li><a href="mailto:hello.quinteroo@gmail.com">hello.quinteroo@gmail.com</a></li>
+        <li><a href="https://github.com/Quinteroo">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/hello-quintero/">LinkedIN</a></li>
+        <li><a href="https://excalidraw.com/#json=VxzYoEPTZTM5pJ7eEbMGk,tyj1udxT9iabd9vjtOE4KQ"><u>Lógica del
+              proyecto</u></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+
+</html>
