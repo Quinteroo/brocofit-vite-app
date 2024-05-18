@@ -7,6 +7,7 @@ https://brocofit.netlify.app
 
 ## Introduction
 It is a project focused on tracking daily calorie intake to help with weight control. In this case, I wanted to develop various JavaScript logic problems:
+- Modules
 - Calculator with data from a form
 - Dynamic filter based on objects in the database
 - Rendering a list of objects with their characteristics by obtaining information from the database
